@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.2.9"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "nf-social-network-api-nosql",
+  "description": "Build an API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. You’ll use ```Express.js``` for routing, a ```MongoDB database```, and the ```Mongoose ODM```. In addition to using the Express.js (Links to an external site.) and Mongoose (Links to an external site.) packages, you may also optionally use a JavaScript date library of your choice or the native JavaScript Date object to format timestamps.",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NFoithong/nf-social-network-api-nosql.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NFoithong/nf-social-network-api-nosql/issues"
+  },
+  "homepage": "https://github.com/NFoithong/nf-social-network-api-nosql#readme"
+}
