@@ -5,10 +5,10 @@ const thoughtController = {
     getAllThought(req, res) {
         Thought.find({})
             .populate({
-                path: 'users',
-                select: '__v'
+                path: 'reactions',
+                select: '-__v'
             })
-            .select('__v')
+            .select('-__v')
             .sort({ _id: -1 })
             .then(dbThoughtData => res.json(dbThoughtData))
             .catch(err => {
@@ -20,13 +20,13 @@ const thoughtController = {
     // Get one Thought by id
     getThoughtById({ params }, res) {
         Thought.findOne({
-                _id: params.id
+                _id: params.thoughtId
             })
             .populate({
-                path: 'users',
-                select: '__v'
+                path: 'reactions',
+                select: '-__v'
             })
-            .select('__v')
+            .select('-__v')
             .sort({ _id: -1 })
             .then(dbThoughtData => {
                 if (!dbThoughtData) {
@@ -45,19 +45,18 @@ const thoughtController = {
     createThought({ params, body }, res) {
         Thought.create(body)
             .then(({ _id }) => {
-                return User.findOneAndUpdate({ _id: params.userId }, { $push: { thoughts: _id } }, { new: true })
+                return User.findOneAndUpdate({ _id: params.userId }, { $push: { thoughts: _id } }, { new: true, runValidators: true });
             })
-            .then(dbThoughtData => {
-                if (!dbThoughtData) {
-                    res.status(404).json({ message: 'No User found with this username' })
+            .then(dbUserData => {
+                if (!dbUserData) {
+                    res.status(404).json({ message: 'No user found with this id!' });
                     return;
                 }
-                res.json(dbThoughtData);
+                res.json(dbUserData);
             })
             .catch(err => res.json(err));
     },
 
-    //add friend - /api/Thoughts/:ThoughtId/friends/:friendId
     addReaction({ params, body }, res) {
         Thought.findOneAndUpdate({ _id: params.thoughtId }, { $push: { reactions: body } }, { new: true, runValidators: true })
             .then(dbThoughtData => {
