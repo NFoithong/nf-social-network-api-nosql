@@ -11,7 +11,7 @@ Build an API for a social network web application where users can share their th
   - [Installation](#installation)
   - [Mockup](#mockup)
   - [Usage](#usage)
-  - [Contributors](#contributors)also optionally use a JavaScript date library of your choice or the native JavaScript Date object to format timestamps.
+  - [Questions](#questions)
 
 ## User Story
 ```
@@ -56,3 +56,6 @@ Walkthrough video should show the POST, PUT, and DELETE routes for thoughts bein
 Walkthrough video should show the POST and DELETE routes for reactions to thoughts being tested in Insomnia.
 
 [Video Demo](https://user-images.githubusercontent.com/69065671/161667911-e8c2e066-cbc6-44af-93ee-231c2e7942af.mov)
+
+## Questions
+Please contact me at [Email](n.foithong1983@gmail.com) with any further questions. <br> [Github link](https://github.com/NFoithong)
