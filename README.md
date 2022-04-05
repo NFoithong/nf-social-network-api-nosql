@@ -1,5 +1,17 @@
 # nf-social-network-api-nosql
-Build an API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. You’ll use ```Express.js``` for routing, a ```MongoDB database```, and the ```Mongoose ODM```. In addition to using the Express.js (Links to an external site.) and Mongoose (Links to an external site.) packages, you may also optionally use a JavaScript date library of your choice or the native JavaScript Date object to format timestamps.
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+Build an API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. You’ll use ```Express.js``` for routing, a ```MongoDB database```, and the ```Mongoose ODM```. In addition to using the Express.js (Links to an external site.) and Mongoose (Links to an external site.) packages, you may 
+
+## Table of Contents
+
+  - [User Story](#user-story)
+  - [Acceptance Criteria](#acceptance-criteria)
+  - [Technologies](#technologies)
+  - [Installation](#installation)
+  - [Mockup](#mockup)
+  - [Usage](#usage)
+  - [Contributors](#contributors)also optionally use a JavaScript date library of your choice or the native JavaScript Date object to format timestamps.
 
 ## User Story
 ```
@@ -19,6 +31,15 @@ THEN I am able to successfully create, update, and delete users and thoughts in 
 WHEN I test API POST and DELETE routes in Insomnia
 THEN I am able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list
 ```
+## Technologies
+JavaScript, Node.js, Express.js, NoSQL(mongoDB and mongoose), Insomnia 
+
+## Installation
+- Clone GitHub repository
+- npm init
+- Ensure that MongoDB and Express are installed on your computer.
+- Invoke application using npm start.
+
 ## Mock-Up
 The following animations show examples of the application's API routes being tested in Insomnia.
 
@@ -33,3 +54,5 @@ Walkthrough video should show the POST, PUT, and DELETE routes for thoughts bein
 - Animation shows the POST and DELETE routes for a user’s friend list being tested in Insomnia:
 
 Walkthrough video should show the POST and DELETE routes for reactions to thoughts being tested in Insomnia.
+
+[Video Demo](https://user-images.githubusercontent.com/69065671/161667911-e8c2e066-cbc6-44af-93ee-231c2e7942af.mov)
